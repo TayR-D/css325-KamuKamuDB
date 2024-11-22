@@ -164,7 +164,6 @@ CREATE TABLE
         Order_NO int not null unique,
         Queue_Number int not null,
         Order_Timestamp timestamp not null,
-        Payment_ID int unique,
         Staff_ID int,
         PRIMARY KEY (Order_NO)
     );
@@ -195,6 +194,7 @@ CREATE TABLE
         ID int not null unique,
         Method varchar(20),
         Amount decimal(8, 2) not null,
+        Order_NO int,
         PRIMARY KEY (ID)
     );
 
@@ -251,7 +251,6 @@ ALTER TABLE
 
 ALTER TABLE
     _Order
-        ADD CONSTRAINT FK_Order_Payment FOREIGN KEY (Payment_ID) REFERENCES Payment (ID),
         ADD CONSTRAINT FK_Order_Staff FOREIGN KEY (Staff_ID) REFERENCES Staff (ID);
 
 ALTER TABLE 
@@ -264,6 +263,10 @@ ALTER TABLE
     Order_Topping 
         ADD CONSTRAINT FK_Topping_Order FOREIGN KEY (Order_Item_Id) REFERENCES Order_Item (ID),
         ADD CONSTRAINT FK_Topping_Topitem FOREIGN KEY (Topping_Item_Name) REFERENCES Topping_Item (_Name);
+
+ALTER TABLE 
+    Payment 
+        ADD CONSTRAINT FK_Payment_Order FOREIGN KEY (Order_NO) REFERENCES _Order (Order_NO);
 
 Alter table 
     Tax_Invoice 

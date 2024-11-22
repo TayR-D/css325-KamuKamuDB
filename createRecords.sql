@@ -193,37 +193,37 @@ INSERT INTO Includes (Promo_ID, Menu_Item_EN_Name, Menu_Item_Size) VALUES
 (3, 'Sparkling Lemonade', 'L');
 
 -- Inserting records into _Order
-INSERT INTO _Order (Order_NO, Queue_Number, Order_Timestamp, Payment_ID, Staff_ID) VALUES
-(1, 1, '2024-11-09 08:15:00', null, 1),
-(2, 2, '2024-11-09 08:30:00', null, 2),
-(3, 3, '2024-11-09 08:45:00', null, 3),
-(4, 4, '2024-11-09 09:00:00', null, 4),
-(5, 5, '2024-11-09 09:15:00', null, 5),
-(6, 6, '2024-11-09 09:30:00', null, 6),
-(7, 7, '2024-11-09 09:45:00', null, 7),
-(8, 8, '2024-11-09 10:00:00', null, 8),
-(9, 9, '2024-11-09 10:15:00', null, 9),
-(10, 10, '2024-11-09 10:30:00', null, 10),
-(11, 11, '2024-11-09 10:45:00', null, 1),
-(12, 12, '2024-11-09 11:00:00', null, 2),
-(13, 13, '2024-11-09 11:15:00', null, 3),
-(14, 14, '2024-11-09 11:30:00', null, 4),
-(15, 15, '2024-11-09 11:45:00', null, 5),
-(16, 16, '2024-11-09 12:00:00', null, 6),
-(17, 17, '2024-11-09 12:15:00', null, 7),
-(18, 18, '2024-11-09 12:30:00', null, 8),
-(19, 19, '2024-11-09 12:45:00', null, 9),
-(20, 20, '2024-11-09 13:00:00', null, 10),
-(21, 21, '2024-11-09 13:15:00', null, 1),
-(22, 22, '2024-11-09 13:30:00', null, 2),
-(23, 23, '2024-11-09 13:45:00', null, 3),
-(24, 24, '2024-11-09 14:00:00', null, 4),
-(25, 25, '2024-11-09 14:15:00', null, 5),
-(26, 26, '2024-11-09 14:30:00', null, 6),
-(27, 27, '2024-11-09 14:45:00', null, 7),
-(28, 28, '2024-11-09 15:00:00', null, 8),
-(29, 29, '2024-11-09 15:15:00', null, 9),
-(30, 30, '2024-11-09 15:30:00', null, 10);
+INSERT INTO _Order (Order_NO, Queue_Number, Order_Timestamp, Staff_ID) VALUES
+(1, 1, '2024-11-09 08:15:00', 1),
+(2, 2, '2024-11-09 08:30:00', 2),
+(3, 3, '2024-11-09 08:45:00', 3),
+(4, 4, '2024-11-09 09:00:00', 4),
+(5, 5, '2024-11-09 09:15:00', 5),
+(6, 6, '2024-11-09 09:30:00', 6),
+(7, 7, '2024-11-09 09:45:00', 7),
+(8, 8, '2024-11-09 10:00:00', 8),
+(9, 9, '2024-11-09 10:15:00', 9),
+(10, 10, '2024-11-09 10:30:00', 10),
+(11, 11, '2024-11-09 10:45:00', 1),
+(12, 12, '2024-11-09 11:00:00', 2),
+(13, 13, '2024-11-09 11:15:00', 3),
+(14, 14, '2024-11-09 11:30:00', 4),
+(15, 15, '2024-11-09 11:45:00', 5),
+(16, 16, '2024-11-09 12:00:00', 6),
+(17, 17, '2024-11-09 12:15:00', 7),
+(18, 18, '2024-11-09 12:30:00', 8),
+(19, 19, '2024-11-09 12:45:00', 9),
+(20, 20, '2024-11-09 13:00:00', 10),
+(21, 21, '2024-11-09 13:15:00', 1),
+(22, 22, '2024-11-09 13:30:00', 2),
+(23, 23, '2024-11-09 13:45:00', 3),
+(24, 24, '2024-11-09 14:00:00', 4),
+(25, 25, '2024-11-09 14:15:00', 5),
+(26, 26, '2024-11-09 14:30:00', 6),
+(27, 27, '2024-11-09 14:45:00', 7),
+(28, 28, '2024-11-09 15:00:00', 8),
+(29, 29, '2024-11-09 15:15:00', 9),
+(30, 30, '2024-11-09 15:30:00', 10);
 
 
 -- Inserting records into Order_Item
@@ -324,97 +324,6 @@ INSERT INTO Payment (ID, Method, Amount, Order_NO) VALUES
 (28, 'Credit Card', 95.00, 28),
 (29, 'Cash', 80.00, 29),
 (30, 'PayPal', 85.00, 30);
-
-UPDATE _Order
-SET Payment_ID = 1
-WHERE Order_NO = 1;
-UPDATE _Order
-SET Payment_ID = 2
-WHERE Order_NO = 2;
-UPDATE _Order
-SET Payment_ID = 3
-WHERE Order_NO = 3;
-UPDATE _Order
-SET Payment_ID = 4
-WHERE Order_NO = 4;
-UPDATE _Order
-SET Payment_ID = 5
-WHERE Order_NO = 5;
-UPDATE _Order
-SET Payment_ID = 6
-WHERE Order_NO = 6;
-UPDATE _Order
-SET Payment_ID = 7
-WHERE Order_NO = 7;
-UPDATE _Order
-SET Payment_ID = 8
-WHERE Order_NO = 8;
-UPDATE _Order
-SET Payment_ID = 9
-WHERE Order_NO = 9;
-UPDATE _Order
-SET Payment_ID = 10
-WHERE Order_NO = 10;
-UPDATE _Order
-SET Payment_ID = 11
-WHERE Order_NO = 11;
-UPDATE _Order
-SET Payment_ID = 12
-WHERE Order_NO = 12;
-UPDATE _Order
-SET Payment_ID = 13
-WHERE Order_NO = 13;
-UPDATE _Order
-SET Payment_ID = 14
-WHERE Order_NO = 14;
-UPDATE _Order
-SET Payment_ID = 15
-WHERE Order_NO = 15;
-UPDATE _Order
-SET Payment_ID = 16
-WHERE Order_NO = 16;
-UPDATE _Order
-SET Payment_ID = 17
-WHERE Order_NO = 17;
-UPDATE _Order
-SET Payment_ID = 18
-WHERE Order_NO = 18;
-UPDATE _Order
-SET Payment_ID = 19
-WHERE Order_NO = 19;
-UPDATE _Order
-SET Payment_ID = 20
-WHERE Order_NO = 20;
-UPDATE _Order
-SET Payment_ID = 21
-WHERE Order_NO = 21;
-UPDATE _Order
-SET Payment_ID = 22
-WHERE Order_NO = 22;
-UPDATE _Order
-SET Payment_ID = 23
-WHERE Order_NO = 23;
-UPDATE _Order
-SET Payment_ID = 24
-WHERE Order_NO = 24;
-UPDATE _Order
-SET Payment_ID = 25
-WHERE Order_NO = 25;
-UPDATE _Order
-SET Payment_ID = 26
-WHERE Order_NO = 26;
-UPDATE _Order
-SET Payment_ID = 27
-WHERE Order_NO = 27;
-UPDATE _Order
-SET Payment_ID = 28
-WHERE Order_NO = 28;
-UPDATE _Order
-SET Payment_ID = 29
-WHERE Order_NO = 29;
-UPDATE _Order
-SET Payment_ID = 30
-WHERE Order_NO = 30;
 
 -- Inserting records into Tax_Invoice
 INSERT INTO Tax_Invoice (Customer_Name, Date, Address, Customer_Identification_NO, Tax_Identification_NO, Tax_Order_NO, Tax_Staff_ID) VALUES
