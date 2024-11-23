@@ -223,7 +223,8 @@ INSERT INTO _Order (Order_NO, Queue_Number, Order_Timestamp, Staff_ID) VALUES
 (27, 27, '2024-11-09 14:45:00', 7),
 (28, 28, '2024-11-09 15:00:00', 8),
 (29, 29, '2024-11-09 15:15:00', 9),
-(30, 30, '2024-11-09 15:30:00', 10);
+(30, 30, '2024-11-09 15:30:00', 10),
+(31, 31, '2024-09-09 15:30:00', 1);
 
 
 -- Inserting records into Order_Item
@@ -257,7 +258,8 @@ INSERT INTO Order_Item (ID, Sweetness, Iced_Blend, Amount, Milk_Option_Name, Ord
 (27, '50', true, 1, 'Soy Milk', 27, 'Cocoa', 'M'),
 (28, '100', false, 1, 'Oat Milk', 28, 'Iced Matcha', 'M'),
 (29, '0', true, 1, 'Fresh Milk', 29, 'Iced Coffee', 'L'),
-(30, '25', false, 1, 'Low Fat Milk', 30, 'Sparkling Lemonade', 'L');
+(30, '25', false, 1, 'Low Fat Milk', 30, 'Sparkling Lemonade', 'L'),
+(31, '25', true, 4, 'Low Fat Milk', 31, 'Dino Milk', 'L');
 
 -- Inserting records into Order_Topping
 INSERT INTO Order_Topping (Order_Item_Id, Amount, Topping_Item_Name) VALUES
@@ -323,7 +325,8 @@ INSERT INTO Payment (ID, Method, Amount, Order_NO) VALUES
 (27, 'PayPal', 65.00, 27),
 (28, 'Credit Card', 95.00, 28),
 (29, 'Cash', 80.00, 29),
-(30, 'PayPal', 85.00, 30);
+(30, 'PayPal', 85.00, 30),
+(31, 'Cash', 280.00, 31);
 
 -- Inserting records into Tax_Invoice
 INSERT INTO Tax_Invoice (Customer_Name, Date, Address, Customer_Identification_NO, Tax_Identification_NO, Tax_Order_NO, Tax_Staff_ID) VALUES
