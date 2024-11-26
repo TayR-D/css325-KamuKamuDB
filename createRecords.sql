@@ -225,6 +225,7 @@ INSERT INTO _Order (Order_NO, Queue_Number, Order_Timestamp, Staff_ID) VALUES
 (29, 29, '2024-11-09 15:15:00', 9),
 (30, 30, '2024-11-09 15:30:00', 10),
 (31, 31, '2024-09-09 15:30:00', 1);
+(32, 32, '2024-09-09 15:45:00', 1);
 
 
 -- Inserting records into Order_Item

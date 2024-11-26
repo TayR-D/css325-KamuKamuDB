@@ -23,7 +23,7 @@ WHERE MONTH(Birth_Date) = MONTH(CURDATE());
 
 -- Advanced
 --Orders Without Payment
-SELECT o.Order_NO, o.Order_Timestamp, s.First_Name, s.Last_Name
+SELECT o.Order_NO, o.Queue_Number ,o.Order_Timestamp, concat(s.First_Name, " ", s.Last_Name) as Staff_Name
 FROM _Order o
 LEFT JOIN Payment p ON o.Order_NO = p.Order_NO
 JOIN Staff s ON o.Staff_ID = s.ID
