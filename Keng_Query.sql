@@ -55,3 +55,17 @@ JOIN Menu_Item mi ON oi.Menu_Item_Name = mi.EN_Name AND oi.Menu_Item_Size = mi.S
 GROUP BY mi.EN_Name, mi.TH_Name
 ORDER BY Total_Sales ASC;
 
+-- Shows how many orders each staff member handled
+SELECT s.First_Name, s.Last_Name, COUNT(o.Order_NO) as total_orders, SUM(p.Amount) as total_sales
+FROM staff s
+LEFT JOIN _order o ON s.ID = o.Staff_ID
+LEFT JOIN payment p ON o.Order_NO = p.Order_NO
+GROUP BY s.First_Name, s.Last_Name
+ORDER BY total_sales DESC;
+
+-- Shows menu items and their recipe information using LEFT JOIN
+SELECT mi.EN_Name, mi.Menu_Category, r.Code as recipe_code, r.Description
+FROM menu_item mi
+LEFT JOIN recipe r ON mi.EN_Name = r.Menu_Item_EN_Name
+ORDER BY mi.EN_Name;
+
